@@ -5,10 +5,10 @@ import {
   ReconnectInterval
 } from 'eventsource-parser'
 
+import GET_REPORT_LINK_CHAT_FUNCTION from '@/lib/chat_functions.json'
+
 const createPrompt = (
-  appName: string,
-  appReports: string,
-  question: string
+  appReports: string
 ) => {
   return endent`
   You are an expert at determining the best report given a user's question about their business.
@@ -16,13 +16,9 @@ const createPrompt = (
 
   Available reports:
   ${appReports}
-
-  Question:
-  ${question}
-
-  Output:
   `
 }
+
 
 export const OpenAIStream = async (
   appName: string,
@@ -31,10 +27,21 @@ export const OpenAIStream = async (
   model: string,
   key: string
 ) => {
-  const prompt = createPrompt(appName, appReports, question)
+  const prompt = createPrompt(appReports)
   console.log('--- System prompt ---', prompt)
 
-  const system = { role: 'system', content: prompt }
+  const systemMsg = { role: 'system', content: prompt }
+  const userMsg = { role: 'user', content: question}
+  const body = JSON.stringify({
+      model,
+      messages: [systemMsg, userMsg],
+      functions: [GET_REPORT_LINK_CHAT_FUNCTION],
+      // function_call: GET_REPORT_LINK_CHAT_FUNCTION["name"],
+      temperature: 0,
+      stream: true
+  })
+
+  console.log('--- body ---', body)
 
   const res = await fetch('https://api.openai.com/v1/chat/completions', {
     headers: {
@@ -42,12 +49,7 @@ export const OpenAIStream = async (
       Authorization: `Bearer ${key || process.env.OPENAI_API_KEY}`
     },
     method: 'POST',
-    body: JSON.stringify({
-      model,
-      messages: [system],
-      temperature: 0,
-      stream: true
-    })
+    body: body
   })
 
   const encoder = new TextEncoder()

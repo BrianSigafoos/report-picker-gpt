@@ -3,23 +3,22 @@
     "key": "SalesSummary",
     "description": "Sales Summary: A general overview of sales from a given time period. The report includes itemization metrics like gross sales, refunds, net sales, discounts, tips, and taxes. It also includes payment metrics like total collected (revenue by tender type) and fees.",
     "filters": [
-      "date",
-      "amount"
+      "date"
     ]
   },
   {
     "key": "SalesTrends",
     "description": "Sales Trends: Compares your daily, weekly, and yearly gross sales.",
     "filters": [
-      "date",
-      "amount"
+      "date"
     ]
   },
   {
     "key": "PaymentMethods",
     "description": "Payment Methods: A summary of the total collected and any associated fees from credit, debit and gift cards, and any other tender types. The reports include payments broken down by debit vs credit, as well as by card brand - American Express, Visa, Mastercard, etc. with corresponding fees. Adjust filters to change the data displayed in the breakdown.",
     "filters": [
-      "date"
+      "date",
+      "payment_method"
     ]
   },
   {
@@ -27,14 +26,18 @@
     "description": "Item Sales: Shows details for all items sold including gross sales, net sales, SKUs, discounts, and total sold. Use advanced reporting options to display item sales by device, employee, or payment method. Note: Click an item in your report to see an item dropdown - specific sales info on that item and all its variations.",
     "filters": [
       "date",
-      "location"
+      "location",
+      "device",
+      "employee",
+      "payment_method"
     ]
   },
   {
     "key": "CategorySale",
     "description": "Category Sale: An overview of top grossing categories and the number of items sold within each category.",
     "filters": [
-      "date"
+      "date",
+      "category"
     ]
   },
   {

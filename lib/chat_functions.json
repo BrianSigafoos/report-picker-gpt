@@ -1,0 +1,29 @@
+{
+  "name": "get_report_links",
+  "description": "Get report links",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "key": {
+        "type": "string",
+        "description": "The key of the report"
+      },
+      "filters": {
+        "type": "string",
+        "enum": [
+          "date",
+          "amount",
+          "location",
+          "device",
+          "employee",
+          "payment_method"
+        ],
+        "description": "The filters of this report to apply"
+      }
+    },
+    "required": [
+      "key",
+      "filters"
+    ]
+  }
+}

@@ -1,3 +1,5 @@
+import { AvailableReportsType } from '@/types/types'
+
 export const APP_TITLE = 'Report Picker GPT'
 export const APP_DESCRIPTION =
   'Generate queries by asking questions about your data'
@@ -169,7 +171,7 @@ const SQUARE_REPORTS = [
 // TODO: add these reports
 const STRIPE_REPORTS = OTHER_REPORTS
 
-export const AVAILABLE_REPORTS = {
+export const AVAILABLE_REPORTS: AvailableReportsType = {
   Other: OTHER_REPORTS,
   PayPal: PAYPAL_REPORTS,
   Square: SQUARE_REPORTS,

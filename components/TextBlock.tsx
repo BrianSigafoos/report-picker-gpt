@@ -1,12 +1,14 @@
 interface Props {
   text: string
   editable?: boolean
+  rows?: number
   onChange?: (value: string) => void
 }
 
 export const TextBlock: React.FC<Props> = ({
   text,
   editable = false,
+  rows = 10,
   onChange = () => {}
 }) => {
   return (
@@ -15,7 +17,7 @@ export const TextBlock: React.FC<Props> = ({
         className='txt-input py-1.5'
         style={{ resize: 'none' }}
         value={text}
-        rows={10}
+        rows={rows}
         onChange={(e) => onChange(e.target.value)}
         disabled={!editable}
       />

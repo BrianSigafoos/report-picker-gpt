@@ -1,0 +1,29 @@
+[
+  {
+    "key": "TransactionsReport",
+    "description": "Transactions Report: A detailed log of all transactions, including payments, refunds, and adjustments. This can be used to reconcile accounts and understand individual transaction details.",
+    "filters": [
+      "date",
+      "amount",
+      "status",
+      "payment_method"
+    ]
+  },
+  {
+    "key": "BalanceReport",
+    "description": "Balance Report: Shows the current balance, including pending and available funds, in various currencies. It may include a breakdown of transactions contributing to the balance.",
+    "filters": [
+      "date",
+      "currency"
+    ]
+  },
+  {
+    "key": "SubscriptionAnalyticsReport",
+    "description": "Subscription Analytics Report: Offers insights into subscription-based revenue, churn rates, average revenue per user (ARPU), and other subscription-related metrics.",
+    "filters": [
+      "date",
+      "subscription_status",
+      "plan"
+    ]
+  }
+]

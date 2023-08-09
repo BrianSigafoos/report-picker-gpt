@@ -156,7 +156,7 @@ export default function QueryGenerator () {
         }}
       />
 
-      <h4>{appName} Reports</h4>
+      <h4>Available Reports</h4>
       <p className='txt-subtitle -mt-3 mb-2 text-sm'>
         Reports available for {appName}
       </p>
@@ -178,6 +178,7 @@ export default function QueryGenerator () {
       <TextBlock
         text={question}
         editable={!loading}
+        rows={3}
         onChange={(value) => {
           setQuestion(value)
           setHasGenerated(false)
@@ -193,8 +194,8 @@ export default function QueryGenerator () {
       </button>
 
       <h4>
-        Generated query
-        <span className='txt-color-primary'> in </span>
+        Reports
+        <span className='txt-color-primary'> on </span>
         {appName}
       </h4>
       <CodeBlock code={outputCode} />

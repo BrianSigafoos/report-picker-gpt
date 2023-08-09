@@ -1,0 +1,7 @@
+[
+  {
+    "key": "ExampleReportName",
+    "description": "Example Report: A great description of the report with as many relevant details as possible to help Report Picker GPT select this report when relevant.",
+    "filters": ["date", "amount"]
+  }
+]

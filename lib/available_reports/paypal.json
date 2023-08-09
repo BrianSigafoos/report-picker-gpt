@@ -1,0 +1,29 @@
+[
+  {
+    "key": "TransactionReport",
+    "description": "Transaction Report: A comprehensive listing of all account transactions, including payments received, payments sent, fees, refunds, and currency conversions. This report is often used for accounting and reconciliation purposes.",
+    "filters": [
+      "date",
+      "transaction_type",
+      "status",
+      "currency"
+    ]
+  },
+  {
+    "key": "MonthlyFinancialSummary",
+    "description": "Monthly Financial Summary Report: Provides an overview of the monthly financial activities, including total sales, total purchases, fees, and net amount. It is designed to give a high-level snapshot of the account’s financial health.",
+    "filters": [
+      "month",
+      "year"
+    ]
+  },
+  {
+    "key": "DisputeAndChargebackReport",
+    "description": "Dispute and Chargeback Report: Details disputes, claims, chargebacks, and reversals that have occurred in the account. It helps in understanding and managing customer disputes and payment challenges.",
+    "filters": [
+      "date",
+      "status",
+      "case_type"
+    ]
+  }
+]

@@ -19,9 +19,7 @@ const createPrompt = (
   `
 }
 
-
 export const OpenAIStream = async (
-  appName: string,
   appReports: string,
   question: string,
   model: string,
@@ -31,14 +29,19 @@ export const OpenAIStream = async (
   console.log('--- System prompt ---', prompt)
 
   const systemMsg = { role: 'system', content: prompt }
-  const userMsg = { role: 'user', content: question}
+  const userMsg = { role: 'user', content: question }
+  const messages = [systemMsg, userMsg]
+  const functions = [GET_REPORT_LINK_CHAT_FUNCTION]
+  // function_call can be: "none" | "auto" | {"name": "<function_name>"}
+  const function_call = { name: GET_REPORT_LINK_CHAT_FUNCTION.name }
+
   const body = JSON.stringify({
-      model,
-      messages: [systemMsg, userMsg],
-      functions: [GET_REPORT_LINK_CHAT_FUNCTION],
-      // function_call: GET_REPORT_LINK_CHAT_FUNCTION["name"],
-      temperature: 0,
-      stream: true
+    model,
+    messages,
+    functions,
+    function_call,
+    temperature: 0,
+    stream: true
   })
 
   console.log('--- body ---', body)
@@ -49,7 +52,7 @@ export const OpenAIStream = async (
       Authorization: `Bearer ${key || process.env.OPENAI_API_KEY}`
     },
     method: 'POST',
-    body: body
+    body
   })
 
   const encoder = new TextEncoder()
@@ -78,7 +81,11 @@ export const OpenAIStream = async (
 
           try {
             const json = JSON.parse(data)
-            const text = json.choices[0].delta.content
+            console.log('reponse:', json)
+            // Handle both cases of responses with "function_call" and those with basic "content"
+            const text = json.choices[0]?.delta?.content
+              ? json.choices[0].delta.content
+              : json.choices[0].delta?.function_call?.arguments
             const queue = encoder.encode(text)
             controller.enqueue(queue)
           } catch (e) {

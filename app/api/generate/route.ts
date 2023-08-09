@@ -9,7 +9,6 @@ export async function POST (req: Request): Promise<Response> {
       (await req.json()) as GenerateBody
 
     const stream = await OpenAIStream(
-      appName,
       appReports,
       question,
       model,

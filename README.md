@@ -15,6 +15,7 @@ Similar to [BrianSigafoos/query-gpt](https://github.com/BrianSigafoos/query-gpt)
 ## References
 
 - [How to call functions with chat models](https://github.com/openai/openai-cookbook/blob/c651bfdda64ac049747c2a174cde1c946e2baf1d/examples/How_to_call_functions_with_chat_models.ipynb)
+- [Tokenizer](https://platform.openai.com/tokenizer) - usage estimates
 
 ___
 

@@ -26,13 +26,14 @@ export const OpenAIStream = async (
   key: string
 ) => {
   const prompt = createPrompt(appReports)
-  console.log('--- System prompt ---', prompt)
+  console.log('\n--- system prompt ---\n', prompt)
 
   const systemMsg = { role: 'system', content: prompt }
   const userMsg = { role: 'user', content: question }
   const messages = [systemMsg, userMsg]
   const functions = [GET_REPORT_LINK_CHAT_FUNCTION]
   // function_call can be: "none" | "auto" | {"name": "<function_name>"}
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const function_call = { name: GET_REPORT_LINK_CHAT_FUNCTION.name }
 
   const body = JSON.stringify({
@@ -44,7 +45,7 @@ export const OpenAIStream = async (
     stream: true
   })
 
-  console.log('--- body ---', body)
+  console.log('\n--- request body ---\n', body)
 
   const res = await fetch('https://api.openai.com/v1/chat/completions', {
     headers: {
@@ -70,6 +71,7 @@ export const OpenAIStream = async (
 
   const stream = new ReadableStream({
     async start (controller) {
+      console.log('\n--- response ---\n')
       const onParse = (event: ParsedEvent | ReconnectInterval) => {
         if (event.type === 'event') {
           const data = event.data
@@ -81,7 +83,7 @@ export const OpenAIStream = async (
 
           try {
             const json = JSON.parse(data)
-            console.log('reponse:', json)
+            console.log(json)
             // Handle both cases of responses with "function_call" and those with basic "content"
             const text = json.choices[0]?.delta?.content
               ? json.choices[0].delta.content

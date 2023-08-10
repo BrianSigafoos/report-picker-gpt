@@ -3,21 +3,24 @@
     "key": "SalesSummary",
     "description": "Sales Summary: A general overview of sales from a given time period. The report includes itemization metrics like gross sales, refunds, net sales, discounts, tips, and taxes. It also includes payment metrics like total collected (revenue by tender type) and fees.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "SalesTrends",
     "description": "Sales Trends: Compares your daily, weekly, and yearly gross sales.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "PaymentMethods",
     "description": "Payment Methods: A summary of the total collected and any associated fees from credit, debit and gift cards, and any other tender types. The reports include payments broken down by debit vs credit, as well as by card brand - American Express, Visa, Mastercard, etc. with corresponding fees. Adjust filters to change the data displayed in the breakdown.",
     "filters": [
-      "date",
+      "startDate",
+      "endDate",
       "payment_method"
     ]
   },
@@ -25,7 +28,9 @@
     "key": "ItemSales",
     "description": "Item Sales: Shows details for all items sold including gross sales, net sales, SKUs, discounts, and total sold. Use advanced reporting options to display item sales by device, employee, or payment method. Note: Click an item in your report to see an item dropdown - specific sales info on that item and all its variations.",
     "filters": [
-      "date",
+      "item",
+      "startDate",
+      "endDate",
       "location",
       "device",
       "employee",
@@ -36,7 +41,8 @@
     "key": "CategorySale",
     "description": "Category Sale: An overview of top grossing categories and the number of items sold within each category.",
     "filters": [
-      "date",
+      "startDate",
+      "endDate",
       "category"
     ]
   },
@@ -44,7 +50,8 @@
     "key": "TeamMemberSales",
     "description": "Team Member Sales: If you're subscribed to Team Plus, show sales per employee, tips, average sale size and revenue per labor hour.",
     "filters": [
-      "date",
+      "startDate",
+      "endDate",
       "location"
     ]
   },
@@ -52,14 +59,16 @@
     "key": "LaborVsSales",
     "description": "Labor vs. Sales: If you're subscribed to Team Plus, track wages and see how your labor cost compares to sales.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "Discounts",
     "description": "Discounts: A list of the top used discounts and total discount amounts collected.",
     "filters": [
-      "date",
+      "startDate",
+      "endDate",
       "amount"
     ]
   },
@@ -67,77 +76,88 @@
     "key": "ModifierSales",
     "description": "Modifier Sales: A list of the top used modifiers in a given time period.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "Comps",
     "description": "Comps: A list of transactions with comped items.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "Voids",
     "description": "Voids: A list of transactions with voided items.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "Taxes",
     "description": "Taxes: An overview of how your tax rates are being used in a given time period, including taxable and non-taxable sales. You'll need to create items with applied tax rates to track “taxable” sales in your reports. Note: “Taxable sales” may not add up to the “total” tax collected because some sales and items may have multiple tax rates applied.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "TransactionStatus",
     "description": "Transaction Status: A list of any unprocessed transactions – declined cards, canceled payments, and other uncompleted transactions.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "GiftCards",
     "description": "Gift Cards: Tracks everything related to your Square gift card activity.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "Transactions",
     "description": "Transactions: A list of individual transactions and transaction details from a given time period. Find this report in Transactions in your online Square Dashboard.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "Balance",
     "description": "Balance: A list of individual transfers and the payments included in each transfer, along with your entire transfer history. View this report in Balance in your online Square Dashboard.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "Disputes",
     "description": "Disputes: View, manage, and get updates on any disputes you may receive.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "CashDrawers",
     "description": "Cash Drawers: Tracks individual cash drawer sessions and your full cash drawer history.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   },
   {
     "key": "ActivityLog",
     "description": "Activity Log: Tracks sensitive actions taken by your team — such as processed refunds, updates to item inventory, changes to tip settings, comps/voids, and discounts.",
     "filters": [
-      "date"
+      "startDate",
+      "endDate"
     ]
   }
 ]

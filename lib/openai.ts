@@ -10,9 +10,11 @@ import GET_REPORT_LINK_CHAT_FUNCTION from '@/lib/chat_functions.json'
 const createPrompt = (
   appReports: string
 ) => {
+  const dateToday = new Date().toISOString().split('T')[0];
+
   return endent`
   You are an expert at determining the best report given a user's question about their business.
-  Use the list of "Available reports:" and "Question:", return the report that you would recommend. Just return the report "key" and any relevant filters.
+  Today's date: ${dateToday}
 
   Available reports:
   ${appReports}

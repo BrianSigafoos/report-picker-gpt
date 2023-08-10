@@ -9,15 +9,34 @@
         "description": "The key of the report"
       },
       "filters": {
-        "type": "string",
-        "enum": [
-          "date",
-          "amount",
-          "location",
-          "device",
-          "employee",
-          "payment_method"
-        ],
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "enum": [
+                "startDate",
+                "endDate",
+                "amount",
+                "location",
+                "device",
+                "employee",
+                "payment_method"
+              ],
+              "description": "The key of the filter"
+            },
+            "value": {
+              "type": "string",
+              "description": "The value of the filter. If the filter is a date, it must be in the format YYYY-MM-DD"
+            }
+          },
+          "required": [
+            "key",
+            "value"
+          ]
+        },
+        "minItems": 1,
         "description": "The filters of this report to apply"
       }
     },

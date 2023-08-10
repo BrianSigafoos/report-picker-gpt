@@ -1,11 +1,26 @@
 # Report Picker GPT
 
+Live demo at [report-picker-gpt.vercel.app](https://report-picker-gpt.vercel.app)
+
+Similar to [BrianSigafoos/query-gpt](https://github.com/BrianSigafoos/query-gpt) with a live demo at [query-gpt.vercel.app](https://query-gpt.vercel.app)
+
 
 ## TODO
 
+- [x] Use [OpenAI functions](https://platform.openai.com/docs/api-reference/chat/create#chat/create-functions) to force JSON response
+- [ ] Add current date to prompt and working filters by date
+- [ ] Add tests/`eval` and compare GPT 3.5 vs 4.0 performance
 - [ ] Switch to `openai` NPM package once 4.0 is released (streaming support): <https://github.com/openai/openai-node/discussions/182>
 
-## Initial setup
+## References
+
+- [How to call functions with chat models](https://github.com/openai/openai-cookbook/blob/c651bfdda64ac049747c2a174cde1c946e2baf1d/examples/How_to_call_functions_with_chat_models.ipynb)
+
+___
+
+_below is from the `create-next-app` script..._
+
+---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -41,7 +56,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## References
-
-- [How to call functions with chat models](https://github.com/openai/openai-cookbook/blob/c651bfdda64ac049747c2a174cde1c946e2baf1d/examples/How_to_call_functions_with_chat_models.ipynb)

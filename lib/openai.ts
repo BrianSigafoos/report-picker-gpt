@@ -35,7 +35,6 @@ export const OpenAIStream = async (
   const messages = [systemMsg, userMsg]
   const functions = [GET_REPORT_LINK_CHAT_FUNCTION]
   // function_call can be: "none" | "auto" | {"name": "<function_name>"}
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   const function_call = { name: GET_REPORT_LINK_CHAT_FUNCTION.name }
 
   const body = JSON.stringify({

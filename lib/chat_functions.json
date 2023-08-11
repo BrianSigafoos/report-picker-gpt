@@ -4,45 +4,58 @@
   "parameters": {
     "type": "object",
     "properties": {
-      "key": {
-        "type": "string",
-        "description": "The key of the report"
-      },
-      "filters": {
+      "reports": {
         "type": "array",
+        "minItems": 0,
+        "maxItems": 3,
         "items": {
           "type": "object",
           "properties": {
             "key": {
               "type": "string",
-              "enum": [
-                "startDate",
-                "endDate",
-                "amount",
-                "location",
-                "device",
-                "employee",
-                "payment_method"
-              ],
-              "description": "The key of the filter"
+              "description": "The key of the report"
             },
-            "value": {
-              "type": "string",
-              "description": "The value of the filter. If the filter is a date, it must be in the format YYYY-MM-DD"
+            "filters": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string",
+                    "enum": [
+                      "startDate",
+                      "endDate",
+                      "amount",
+                      "location",
+                      "device",
+                      "employee",
+                      "paymentMethod"
+                    ],
+                    "description": "The key of the filter"
+                  },
+                  "value": {
+                    "type": "string",
+                    "description": "The value of the filter. If the filter is a date, it must be in the format YYYY-MM-DD"
+                  }
+                },
+                "required": [
+                  "key",
+                  "value"
+                ]
+              },
+              "description": "The filters of this report to apply"
             }
           },
           "required": [
             "key",
-            "value"
+            "filters"
           ]
-        },
-        "minItems": 1,
-        "description": "The filters of this report to apply"
+        }
+      },
+      "error": {
+        "type": "string",
+        "description": "An optional error message"
       }
-    },
-    "required": [
-      "key",
-      "filters"
-    ]
+    }
   }
 }

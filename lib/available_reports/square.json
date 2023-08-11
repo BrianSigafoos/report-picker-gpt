@@ -21,7 +21,7 @@
     "filters": [
       "startDate",
       "endDate",
-      "payment_method"
+      "paymentMethod"
     ]
   },
   {
@@ -34,7 +34,7 @@
       "location",
       "device",
       "employee",
-      "payment_method"
+      "paymentMethod"
     ]
   },
   {
@@ -48,7 +48,7 @@
   },
   {
     "key": "TeamMemberSales",
-    "description": "Team Member Sales: If you're subscribed to Team Plus, show sales per employee, tips, average sale size and revenue per labor hour.",
+    "description": "Team Member Sales: Show sales per employee, tips, average sale size and revenue per labor hour.",
     "filters": [
       "startDate",
       "endDate",
@@ -57,7 +57,7 @@
   },
   {
     "key": "LaborVsSales",
-    "description": "Labor vs. Sales: If you're subscribed to Team Plus, track wages and see how your labor cost compares to sales.",
+    "description": "Labor vs. Sales: Track wages and see how your labor cost compares to sales.",
     "filters": [
       "startDate",
       "endDate"
@@ -98,7 +98,7 @@
   },
   {
     "key": "Taxes",
-    "description": "Taxes: An overview of how your tax rates are being used in a given time period, including taxable and non-taxable sales. You'll need to create items with applied tax rates to track “taxable” sales in your reports. Note: “Taxable sales” may not add up to the “total” tax collected because some sales and items may have multiple tax rates applied.",
+    "description": "Taxes: An overview of how your tax rates are being used in a given time period, including taxable and non-taxable sales.",
     "filters": [
       "startDate",
       "endDate"
@@ -106,7 +106,7 @@
   },
   {
     "key": "TransactionStatus",
-    "description": "Transaction Status: A list of any unprocessed transactions – declined cards, canceled payments, and other uncompleted transactions.",
+    "description": "Transaction Status: A list of any unprocessed transactions like declined cards, canceled payments, and other uncompleted transactions.",
     "filters": [
       "startDate",
       "endDate"
@@ -122,7 +122,7 @@
   },
   {
     "key": "Transactions",
-    "description": "Transactions: A list of individual transactions and transaction details from a given time period. Find this report in Transactions in your online Square Dashboard.",
+    "description": "Transactions: A list of individual transactions and transaction details from a given time period.",
     "filters": [
       "startDate",
       "endDate"
@@ -130,7 +130,7 @@
   },
   {
     "key": "Balance",
-    "description": "Balance: A list of individual transfers and the payments included in each transfer, along with your entire transfer history. View this report in Balance in your online Square Dashboard.",
+    "description": "Balance: A list of individual transfers and the payments included in each transfer, along with your entire transfer history. ",
     "filters": [
       "startDate",
       "endDate"
@@ -154,7 +154,7 @@
   },
   {
     "key": "ActivityLog",
-    "description": "Activity Log: Tracks sensitive actions taken by your team — such as processed refunds, updates to item inventory, changes to tip settings, comps/voids, and discounts.",
+    "description": "Activity Log: Tracks sensitive actions taken by your team, such as processed refunds, updates to item inventory, changes to tip settings, comps/voids, and discounts.",
     "filters": [
       "startDate",
       "endDate"

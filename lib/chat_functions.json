@@ -6,7 +6,6 @@
     "properties": {
       "reports": {
         "type": "array",
-        "minItems": 0,
         "maxItems": 3,
         "items": {
           "type": "object",
@@ -44,6 +43,10 @@
                 ]
               },
               "description": "The filters of this report to apply"
+            },
+            "confidence": {
+              "type": "number",
+              "description": "Confidence level that this is the best report to answer the question."
             }
           },
           "required": [

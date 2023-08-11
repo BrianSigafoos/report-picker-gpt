@@ -6,7 +6,6 @@
     "properties": {
       "reports": {
         "type": "array",
-        "minItems": 0,
         "maxItems": 3,
         "items": {
           "type": "object",
@@ -35,7 +34,7 @@
                   },
                   "value": {
                     "type": "string",
-                    "description": "The value of the filter. If the filter is a date, it must be in the format YYYY-MM-DD"
+                    "description": "The value of the filter. If filter is a date, format as YYYY-MM-DD"
                   }
                 },
                 "required": [
@@ -44,6 +43,10 @@
                 ]
               },
               "description": "The filters of this report to apply"
+            },
+            "confidence": {
+              "type": "number",
+              "description": "Confidence score"
             }
           },
           "required": [

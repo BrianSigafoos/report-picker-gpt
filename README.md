@@ -10,7 +10,7 @@ Similar to [BrianSigafoos/query-gpt](https://github.com/BrianSigafoos/query-gpt)
 - [x] Use [OpenAI functions](https://platform.openai.com/docs/api-reference/chat/create#chat/create-functions) to force JSON response
 - [x] Add current date to prompt and working filters by date
 - [x] Return multiple reports (max 3) or an error message
-- [ ] Add confidence score for each report recommendation
+- [x] Add confidence score for each report recommendation
 - [ ] Add tests/`eval` and compare GPT 3.5 vs 4.0 performance across some baseline queries
 - [ ] Switch to `openai` NPM package once 4.0 is released (streaming support): <https://github.com/openai/openai-node/discussions/182>
 

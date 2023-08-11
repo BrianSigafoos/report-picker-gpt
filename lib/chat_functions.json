@@ -34,7 +34,7 @@
                   },
                   "value": {
                     "type": "string",
-                    "description": "The value of the filter. If the filter is a date, it must be in the format YYYY-MM-DD"
+                    "description": "The value of the filter. If filter is a date, format as YYYY-MM-DD"
                   }
                 },
                 "required": [
@@ -46,7 +46,7 @@
             },
             "confidence": {
               "type": "number",
-              "description": "Confidence level that this is the best report to answer the question."
+              "description": "Confidence score"
             }
           },
           "required": [

@@ -43,7 +43,6 @@
                   "value"
                 ]
               },
-              "minItems": 1,
               "description": "The filters of this report to apply"
             }
           },
@@ -52,10 +51,11 @@
             "filters"
           ]
         }
+      },
+      "error": {
+        "type": "string",
+        "description": "An optional error message"
       }
-    },
-    "required": [
-      "reports"
-    ]
+    }
   }
 }

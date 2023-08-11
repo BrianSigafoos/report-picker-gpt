@@ -13,8 +13,9 @@ const createPrompt = (
   const dateToday = new Date().toISOString().split('T')[0]
 
   return endent`
-  You're an expert finding the best reports to answer a user's question about their business.
-  If the question couldn't be answered by any report, use the "errorMsg" field to explain why.
+  You're an expert at finding the best report(s) to answer a user's question about their business.
+  If the question isn't answerable by these reports, return "NA" as the "error".
+
   Today's date: ${dateToday}
 
   Available reports:

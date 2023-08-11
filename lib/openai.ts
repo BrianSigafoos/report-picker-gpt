@@ -10,10 +10,11 @@ import GET_REPORT_LINK_CHAT_FUNCTION from '@/lib/chat_functions.json'
 const createPrompt = (
   appReports: string
 ) => {
-  const dateToday = new Date().toISOString().split('T')[0];
+  const dateToday = new Date().toISOString().split('T')[0]
 
   return endent`
-  You are an expert at determining the best report given a user's question about their business.
+  You're an expert finding the best reports to answer a user's question about their business.
+  If the question couldn't be answered by any report, use the "errorMsg" field to explain why.
   Today's date: ${dateToday}
 
   Available reports:
@@ -35,13 +36,13 @@ export const OpenAIStream = async (
   const messages = [systemMsg, userMsg]
   const functions = [GET_REPORT_LINK_CHAT_FUNCTION]
   // function_call can be: "none" | "auto" | {"name": "<function_name>"}
-  const function_call = { name: GET_REPORT_LINK_CHAT_FUNCTION.name }
+  const functionCall = { name: GET_REPORT_LINK_CHAT_FUNCTION.name }
 
   const body = JSON.stringify({
     model,
     messages,
     functions,
-    function_call,
+    function_call: functionCall,
     temperature: 0,
     stream: true
   })
@@ -86,7 +87,7 @@ export const OpenAIStream = async (
             const json = JSON.parse(data)
             console.log(json)
             // Handle both cases of responses with "function_call" and those with basic "content"
-            const text = json.choices[0]?.delta?.content
+            const text = json.choices[0].delta?.content
               ? json.choices[0].delta.content
               : json.choices[0].delta?.function_call?.arguments
             const queue = encoder.encode(text)

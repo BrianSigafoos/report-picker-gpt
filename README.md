@@ -8,12 +8,15 @@ Similar to [BrianSigafoos/query-gpt](https://github.com/BrianSigafoos/query-gpt)
 ## TODO
 
 - [x] Use [OpenAI functions](https://platform.openai.com/docs/api-reference/chat/create#chat/create-functions) to force JSON response
-- [ ] Add current date to prompt and working filters by date
-- [ ] Add tests/`eval` and compare GPT 3.5 vs 4.0 performance
+- [x] Add current date to prompt and working filters by date
+- [ ] Return 1-3 reports or an error message
+- [ ] Add confidence score for each report recommendation
+- [ ] Add tests/`eval` and compare GPT 3.5 vs 4.0 performance across some baseline queries
 - [ ] Switch to `openai` NPM package once 4.0 is released (streaming support): <https://github.com/openai/openai-node/discussions/182>
 
 ## References
 
+- [OpenAI functions](https://platform.openai.com/docs/api-reference/chat/create#chat/create-functions)
 - [How to call functions with chat models](https://github.com/openai/openai-cookbook/blob/c651bfdda64ac049747c2a174cde1c946e2baf1d/examples/How_to_call_functions_with_chat_models.ipynb)
 - [Tokenizer](https://platform.openai.com/tokenizer) - usage estimates
 

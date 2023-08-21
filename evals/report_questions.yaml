@@ -48,3 +48,47 @@ Comps:
   - Can I view all the transactions with complimentary items for a specific event or promotion?
   - How many comped items were there during the last month, and can I see the details?
 
+Voids:
+  - What were the transactions with voided items yesterday?
+  - Can I view all the voided transactions for the past week?
+  - How many voided items were there during the last special promotion?
+
+Taxes:
+  - What's an overview of how tax rates were applied last month, including taxable and non-taxable sales?
+  - Can I see the details of tax collection for the past quarter?
+  - How were the different tax rates used during the year-end clearance sale?
+
+TransactionStatus:
+  - What were the unprocessed transactions, like declined cards and canceled payments, last weekend?
+  - Can I view all uncompleted transactions for a specific date range?
+  - How many declined transactions were there during the Black Friday sales?
+
+GiftCards:
+  - How can I track everything related to Square gift card activity for the holiday season?
+  - What were the details of gift card usage and sales for the last month?
+  - Can I view a summary of gift card activities for a specific event or promotion?
+
+Transactions:
+  - Can I get a list of individual transactions and their details for the past week?
+  - What were the transaction details for a specific date or event?
+  - How can I view a detailed report of all transactions during the summer sale?
+
+Balance:
+  - What are the individual transfers and the payments included in each transfer for this month?
+  - Can I view my entire transfer history and the details of each transfer?
+  - How can I track the balance and transfers for a specific quarter or year?
+
+Disputes:
+  - How can I view, manage, and get updates on any disputes received last month?
+  - What were the details of disputes during a particular sale or promotion?
+  - Can I see a summary of all disputes for the past year?
+
+CashDrawers:
+  - Can I track individual cash drawer sessions for the past week?
+  - What's the full cash drawer history for the last quarter?
+  - How were the cash drawers managed during the year-end clearance sale?
+
+ActivityLog:
+  - How can I track sensitive actions taken by the team, like processed refunds and changes to inventory, for the past month?
+  - What were the activity logs for discounts and comps/voids during a specific event?
+  - Can I view the detailed activity logs for updates to tip settings and other sensitive actions for the last quarter?

@@ -11,84 +11,89 @@ SalesTrends:
 PaymentMethods:
   - What's the breakdown of payments collected through debit vs credit cards last weekend?
   - How much did I earn from American Express vs Visa cards in the first half of this year?
-  - Can I see a detailed breakdown of payment methods for the Black Friday sales?
+  - Show me a detailed breakdown of payment methods for the Black Friday sales?
 
 ItemSales:
   - How many t-shirts did we sell last month, and what were the gross and net sales?
-  - Can I view the sales of coffee mugs by different employees or payment methods?
+  - Show me the sales of coffee mugs by different employees or payment methods?
   - What's the specific sales information for the "Summer Collection" items?
 
 CategorySale:
   - Which category was the top-grossing last year, and how many items were sold within that category?
   - How did the sales of the "Electronics" category perform during the Christmas season?
-  - Can I get detailed insights into the sales of the "Home Decor" category for the last six months?
+  - Show me detailed insights into the sales of the "Home Decor" category for the last six months?
 
 TeamMemberSales:
   - How many sales did each employee make last week, and what were the average sale sizes?
-  - What were the total tips collected by the team, and what's the revenue per labor hour for this month?
-  - Can I compare the sales performance of different team members for the last quarter?
+  - What was the total tips collected by the team, and what's the revenue per labor hour for this month?
+  - Show me a comparison of the sales performance of different team members for the last quarter?
 
 LaborVsSales:
   - How do my labor costs compare to sales for the first half of the year?
   - What's the relationship between wages and sales during the holiday season?
-  - Can I analyze the trend of labor costs vs. sales on a weekly basis?
+  - Show me an analysis of the trend of labor costs vs. sales on a weekly basis?
 
 Discounts:
   - What were the top-used discounts last month, and what's the total amount collected from them?
   - How much did I give in discounts during the summer sale, and what were the most popular ones?
-  - Can I view the total discount amounts for specific amounts or dates?
+  - Show me the total discount amounts for specific amounts or dates?
 
 ModifierSales:
   - What were the most used modifiers for my food items last weekend?
-  - Can I see a list of the top modifiers used during the Christmas season?
+  - Show me a list of the top modifiers used during the Christmas season?
   - How can I analyze the trends in modifier usage over different time periods?
 
 Comps:
   - What were the transactions with comped items last Friday?
-  - Can I view all the transactions with complimentary items for a specific event or promotion?
-  - How many comped items were there during the last month, and can I see the details?
+  - Show me all the transactions with complimentary items for a specific event or promotion?
+  - How many comped items were there during the last month, and show me the details?
 
 Voids:
   - What were the transactions with voided items yesterday?
-  - Can I view all the voided transactions for the past week?
+  - Show me all the voided transactions for the past week?
   - How many voided items were there during the last special promotion?
 
 Taxes:
   - What's an overview of how tax rates were applied last month, including taxable and non-taxable sales?
-  - Can I see the details of tax collection for the past quarter?
+  - Show me the details of tax collection for the past quarter?
   - How were the different tax rates used during the year-end clearance sale?
 
 TransactionStatus:
   - What were the unprocessed transactions, like declined cards and canceled payments, last weekend?
-  - Can I view all uncompleted transactions for a specific date range?
+  - Show me all uncompleted transactions for a specific date range?
   - How many declined transactions were there during the Black Friday sales?
 
 GiftCards:
   - How can I track everything related to Square gift card activity for the holiday season?
   - What were the details of gift card usage and sales for the last month?
-  - Can I view a summary of gift card activities for a specific event or promotion?
+  - Show me a summary of gift card activities for a specific event or promotion?
 
 Transactions:
-  - Can I get a list of individual transactions and their details for the past week?
+  - Show me a list of individual transactions and their details for the past week?
   - What were the transaction details for a specific date or event?
   - How can I view a detailed report of all transactions during the summer sale?
 
 Balance:
   - What are the individual transfers and the payments included in each transfer for this month?
-  - Can I view my entire transfer history and the details of each transfer?
+  - Show me my entire transfer history and the details of each transfer?
   - How can I track the balance and transfers for a specific quarter or year?
 
 Disputes:
   - How can I view, manage, and get updates on any disputes received last month?
   - What were the details of disputes during a particular sale or promotion?
-  - Can I see a summary of all disputes for the past year?
+  - Show me a summary of all disputes for the past year?
 
 CashDrawers:
-  - Can I track individual cash drawer sessions for the past week?
+  - Show me how to track individual cash drawer sessions for the past week?
   - What's the full cash drawer history for the last quarter?
   - How were the cash drawers managed during the year-end clearance sale?
 
 ActivityLog:
   - How can I track sensitive actions taken by the team, like processed refunds and changes to inventory, for the past month?
   - What were the activity logs for discounts and comps/voids during a specific event?
-  - Can I view the detailed activity logs for updates to tip settings and other sensitive actions for the last quarter?
+  - Show me the detailed activity logs for updates to tip settings and other sensitive actions for the last quarter?
+
+NA:
+  - How many llamas live in the Andes mountains?
+  - What's the best way to get to the moon?
+  - Where should I shop for my next pair of shoes?

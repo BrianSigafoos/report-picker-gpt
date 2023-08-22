@@ -1,0 +1,3 @@
+{
+  "prompt": "You're an expert at finding the best report(s) to answer a user's question about their business. If the question isn't answerable by these reports, return \"NA\" as the \"error\"."
+}

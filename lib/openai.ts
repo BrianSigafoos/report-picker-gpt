@@ -6,15 +6,15 @@ import {
 } from 'eventsource-parser'
 
 import GET_REPORT_LINK_CHAT_FUNCTION from '@/lib/chat_functions.json'
+import PROMPT_TEMPLATE from '@/lib/prompt_template.json'
 
-const createPrompt = (
+const createSystemPrompt = (
   appReports: string
 ) => {
   const dateToday = new Date().toISOString().split('T')[0]
 
   return endent`
-  You're an expert at finding the best report(s) to answer a user's question about their business.
-  If the question isn't answerable by these reports, return "NA" as the "error".
+  ${PROMPT_TEMPLATE.prompt}
 
   Today's date: ${dateToday}
 
@@ -29,7 +29,7 @@ export const OpenAIStream = async (
   model: string,
   key: string
 ) => {
-  const prompt = createPrompt(appReports)
+  const prompt = createSystemPrompt(appReports)
   console.log('\n--- system prompt ---\n', prompt)
 
   const systemMsg = { role: 'system', content: prompt }
@@ -86,7 +86,7 @@ export const OpenAIStream = async (
 
           try {
             const json = JSON.parse(data)
-            console.log(json)
+            // console.log(json)
             // Handle both cases of responses with "function_call" and those with basic "content"
             const text = json.choices[0].delta?.content
               ? json.choices[0].delta.content

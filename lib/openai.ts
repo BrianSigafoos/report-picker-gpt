@@ -36,7 +36,8 @@ export const OpenAIStream = async (
   const userMsg = { role: 'user', content: question }
   const messages = [systemMsg, userMsg]
   const functions = [GET_REPORT_LINK_CHAT_FUNCTION]
-  // function_call can be: "none" | "auto" | {"name": "<function_name>"}
+  // The `function_call` API arg can be: "none" | "auto" | {"name": "<function_name>"}
+  // Here we tell OpenAI to always reply using this function.
   const functionCall = { name: GET_REPORT_LINK_CHAT_FUNCTION.name }
 
   const body = JSON.stringify({
